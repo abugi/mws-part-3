@@ -1,0 +1,50 @@
+{
+  "name": "Restaurant Review Application",
+  "short_name": "resReview",
+  "icons": [
+    {
+      "src": "/img/icons/app-icon-48x48.png",
+      "type": "images/png",
+      "sizes": "48x48"
+    },
+    {
+      "src": "/img/icons/app-icon-96x96.png",
+      "type": "images/png",
+      "sizes": "96x96"
+    },
+    {
+      "src": "/img/icons/app-icon-144x144.png",
+      "type": "images/png",
+      "sizes": "144x144"
+    },
+    {
+      "src": "/img/icons/app-icon-192x192.png",
+      "type": "images/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/img/icons/app-icon-256x256.png",
+      "type": "images/png",
+      "sizes": "256x256"
+    },
+    {
+      "src": "/img/icons/app-icon-384x384.png",
+      "type": "images/png",
+      "sizes": "384x384"
+    },
+    {
+      "src": "/img/icons/app-icon-512x512.png",
+      "type": "images/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/index.html",
+  "scope": ".",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#fff",
+  "theme_color": "#ad2a1a",
+  "description": "A simple restaurant review application",
+  "dir": "ltr",
+  "lang": "en-US"
+}
