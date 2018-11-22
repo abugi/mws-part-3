@@ -36,20 +36,38 @@ render = () => {
 /**
  * Initialize leaflet map
  */
-initMap = (lat, lng) => {
+// initMap = (lat, lng) => {
+//   self.newMap = L.map('map', {
+//     center: [lat, lng],
+//     zoom: 16,
+//     scrollWheelZoom: false
+//   });
+//   L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.jpg70?access_token={mapboxToken}', {
+//     mapboxToken: 'pk.eyJ1IjoidW1hcnl1c3VmIiwiYSI6ImNqa2pzMzV6bzBzOGQzcHBoZWI4eGZ6Y3IifQ.AbhumTLiRdMM7isvxmlE-w',
+//     maxZoom: 18,
+//     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
+//       '<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
+//       'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+//     id: 'mapbox.streets'
+//   }).addTo(newMap);
+
+//   DBHelper.mapMarkerForRestaurant(self.restaurant, self.newMap);
+// }
+
+initMap = () => {
   self.newMap = L.map('map', {
-    center: [lat, lng],
+    center: [40.722216, -73.987501],
     zoom: 16,
     scrollWheelZoom: false
   });
-  L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.jpg70?access_token={mapboxToken}', {
-    mapboxToken: 'pk.eyJ1IjoidW1hcnl1c3VmIiwiYSI6ImNqa2pzMzV6bzBzOGQzcHBoZWI4eGZ6Y3IifQ.AbhumTLiRdMM7isvxmlE-w',
+  L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.jpg70?access_token=pk.eyJ1IjoiYWJ1Z2kiLCJhIjoiY2prc2thazcxMDB4YTN2c2FhdGg4ejlzZSJ9.hdfangFO9Eq_rCKA9Iqwng', {
+    mapboxToken: '<your MAPBOX API KEY HERE>',
     maxZoom: 18,
     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
       '<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
       'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
     id: 'mapbox.streets'
-  }).addTo(newMap);
+  }).addTo(newMap)
 
   DBHelper.mapMarkerForRestaurant(self.restaurant, self.newMap);
 }
