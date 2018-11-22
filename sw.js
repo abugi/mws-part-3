@@ -1,7 +1,7 @@
 importScripts("/js/idb.js");
 importScripts("/js/indexDB.js");
 importScripts("/js/dbhelper.js");
-const static = 'restaurant-7';
+const static = 'restaurant-9';
 const dynamic = 'restReviewDynamic-v1';
 const appShell = [
   '/',
