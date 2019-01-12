@@ -59,7 +59,7 @@ self.addEventListener('activate', event => {
  * or save it for later use
  */
 self.addEventListener('fetch', event => {
-  let url = 'http://localhost:1337/restaurants';
+  let url = 'https://mws-restaurant-review.herokuapp.com/restaurants';
   if (event.request.url === url) {
     event.respondWith(fetch(event.request)
       .then(res => {
@@ -102,7 +102,7 @@ self.addEventListener('sync', e => {
       db.readeAllDeferedReviews()
         .then(data => {
           for (const review of data) {
-            fetch("http://localhost:1337/reviews/", {
+            fetch("https://mws-restaurant-review.herokuapp.com/reviews/", {
               method: "POST",
               header: {
                 "Content-Type": "application/json",

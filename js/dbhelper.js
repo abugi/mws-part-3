@@ -18,7 +18,7 @@ class DBHelper {
   // Database URL.
   static get DATABASE_URL() {
     const port = 1337; // Change this to your server port
-    return `http://localhost:${port}/restaurants`;
+    return `https://mws-restaurant-review.herokuapp.com/restaurants`;
   }
 
   // Fetch all restaurants.
@@ -181,7 +181,7 @@ class DBHelper {
           callback(null, reviews);
         } else {
           // no reviews in IDB
-          const url = `http://localhost:1337/reviews/?restaurant_id=${id}`;
+          const url = `https://mws-restaurant-review.herokuapp.com/reviews/?restaurant_id=${id}`;
           // get  reviews online to render and save them to IDB
           fetch(url)
             .then(res => res.json())
@@ -217,7 +217,7 @@ class DBHelper {
    */
   static sendReviewData(review, callback) {
     // we are online or lie-fi
-    const url = "http://localhost:1337/reviews/";
+    const url = "https://mws-restaurant-review.herokuapp.com/reviews/";
 
     fetch(url, {
       method: "POST",
