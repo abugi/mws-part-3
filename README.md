@@ -1,12 +1,11 @@
 # Restaurant Reviews Application
 This project is an exercise as a part of Mobile Web Specialist Nanodegree at Udacity
 
-### How to use
-Clone the repository using the link below!
-`git clone https://github.com/abugi/mws-part-3.git` 
+### Description
+A fully functional progressive web application that carries out review of Restaurants around the world. 
+Being a prgressive web app, it functions both online and offline, communicates effectively with the server using AJAX calls and absolutely responsive.
 
-You can as well download the ZIP file or fork the repository
+The applicaiton is highly performant with lighthouse score of over 90,
+It is also usable for people with any form of disablities.
 
-* In your terminal, cd into the project directory
-* run the command `node server` to start up the server
-* Visit `http://localhost:8000` in your browser
+You can download the ZIP file or fork the repository for use of any kind!
