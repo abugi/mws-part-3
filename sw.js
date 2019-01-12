@@ -1,7 +1,7 @@
 importScripts("/js/idb.js");
 importScripts("/js/indexDB.js");
 importScripts("/js/dbhelper.js");
-const static = 'restaurant-10';
+const static = 'restaurant-15';
 const dynamic = 'restReviewDynamic-v1';
 const appShell = [
   '/',
@@ -59,7 +59,7 @@ self.addEventListener('activate', event => {
  * or save it for later use
  */
 self.addEventListener('fetch', event => {
-  let url = 'https://mws-restaurant-review.herokuapp.com/restaurants';
+  let url = 'http://localhost:1337/restaurants/';
   if (event.request.url === url) {
     event.respondWith(fetch(event.request)
       .then(res => {
@@ -102,7 +102,7 @@ self.addEventListener('sync', e => {
       db.readeAllDeferedReviews()
         .then(data => {
           for (const review of data) {
-            fetch("https://mws-restaurant-review.herokuapp.com/reviews/", {
+            fetch("http://localhost:1337/reviews/", {
               method: "POST",
               header: {
                 "Content-Type": "application/json",
