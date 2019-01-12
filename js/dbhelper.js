@@ -159,12 +159,12 @@ class DBHelper {
 
   // Restaurant page URL.
   static urlForRestaurant(restaurant) {
-    return `https://mws-restaurant-review.herokuapp.com/restaurant.html?id=${restaurant.id}`;
+    return `./restaurant.html?id=${restaurant.id}`;
   }
 
   // Restaurant image URL.
   static imageUrlForRestaurant(restaurant) {
-    return `https://mws-restaurant-review.herokuapp.com/img/${restaurant.id}.jpg`;
+    return `/img/${restaurant.id}.jpg`;
   }
 
   /**
